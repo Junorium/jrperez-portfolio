@@ -28,45 +28,48 @@
     </nav>
 
     <main>
-        <section class="arts-hero">
-            <h1 class="arts-title">Arts</h1>
-            <p class="arts-subtitle">Creative explorations across visual art, music, and design</p>
+        <section class="case-studies-hero">
+            <h1 class="case-studies-title">Case Studies</h1>
+            <p class="case-studies-subtitle">Weekly deep dives into engineering and design inventions—drawings, analysis, and how they work</p>
         </section>
 
-        <!-- Art Section -->
-        <section class="art-section" id="art">
-            <div class="art-container">
-                <h2>Art</h2>
-                <div class="art-grid">
-                    <div class="art-placeholder">
-                        <p>Visual art portfolio coming soon</p>
-                    </div>
+        <section class="case-studies-list" aria-label="Case study archive">
+            <!-- Layout: text left, PDF right. Add new studies at the top; alternate case-study--reverse each entry. -->
+            <article class="case-study" id="mechanical-fasteners">
+                <div class="case-study-text">
+                    <p class="case-study-label">Case Study 01</p>
+                    <h2 class="case-study-heading">Mechanical Fasteners</h2>
+                    <p class="case-study-description">Thread forms, preload, joint stiffness, and failure modes—broken down with sketches and first-principles mechanics for bolts, screws, and rivets in real assemblies.</p>
+                    <a class="case-study-download" href="casestudies/mechanical-fasteners.pdf" target="_blank" rel="noopener noreferrer">Open full PDF</a>
                 </div>
-            </div>
-        </section>
+                <div class="case-study-viewer">
+                    <iframe
+                        src="casestudies/mechanical-fasteners.pdf"
+                        title="Mechanical Fasteners case study PDF"
+                        loading="lazy"
+                    ></iframe>
+                </div>
+            </article>
 
-        <!-- Music Section -->
-        <section class="music-section" id="music">
-            <div class="music-container">
-                <h2>Music</h2>
-                <div class="music-grid">
-                    <div class="music-placeholder">
-                        <p>Music projects coming soon</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <!--
+            TEMPLATE — copy block, toggle case-study--reverse on every other study, drop PDF in casestudies/
 
-        <!-- Design Section -->
-        <section class="design-section" id="design">
-            <div class="design-container">
-                <h2>Design</h2>
-                <div class="design-grid">
-                    <div class="design-placeholder">
-                        <p>Design portfolio coming soon</p>
-                    </div>
+            <article class="case-study case-study--reverse" id="your-slug">
+                <div class="case-study-text">
+                    <p class="case-study-label">Case Study 02</p>
+                    <h2 class="case-study-heading">Title Here</h2>
+                    <p class="case-study-description">Short description of the invention and what the analysis covers.</p>
+                    <a class="case-study-download" href="casestudies/your-slug.pdf" target="_blank" rel="noopener noreferrer">Open full PDF</a>
                 </div>
-            </div>
+                <div class="case-study-viewer">
+                    <iframe
+                        src="casestudies/your-slug.pdf"
+                        title="Title Here case study PDF"
+                        loading="lazy"
+                    ></iframe>
+                </div>
+            </article>
+            -->
         </section>
     </main>
 
