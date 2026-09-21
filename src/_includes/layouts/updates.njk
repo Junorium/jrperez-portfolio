@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+---
+<section class="page-hero on-field">
+  <div class="wrap">
+    {% include "partials/breadcrumbs.njk" %}
+    <h1>{{ title }}</h1>
+    {% if intro %}
+      <p class="intro">{{ intro }}</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section on-paper">
+  <div class="wrap">
+    <ol class="updates-full">
+      {% for month in updates | latestMonths(100) %}
+        <li>
+          <time datetime="{{ month.month }}">{{ month.month | monthLabel }}</time>
+          {% for item in month.items %}
+            <p>
+              {% if item.link %}
+                <a href="{{ item.link }}">{{ item.text }}</a>
+              {% else %}
+                {{ item.text }}
+              {% endif %}
+            </p>
+          {% endfor %}
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>

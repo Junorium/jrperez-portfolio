@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JR Perez | Mechanical Engineer and Founder of SmartFlow</title>
+<meta name="description" content="JR Perez is a mechanical engineer and product designer, founder of SmartFlow inventory software for manufacturing floors, and a researcher at Lehigh University.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://YOUR-DOMAIN.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="JR Perez">
+<meta property="og:title" content="JR Perez | Mechanical Engineer and Founder of SmartFlow">
+<meta property="og:description" content="Mechanical engineer and product designer. Founder of SmartFlow inventory software for manufacturing floors.">
+<meta property="og:url" content="https://YOUR-DOMAIN.com/">
+<meta property="og:image" content="https://YOUR-DOMAIN.com/images/og-home.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1B4D3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;900&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://YOUR-DOMAIN.com/#website",
+      "url": "https://YOUR-DOMAIN.com/",
+      "name": "JR Perez",
+      "publisher": { "@id": "https://YOUR-DOMAIN.com/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://YOUR-DOMAIN.com/#person",
+      "name": "JR Perez",
+      "url": "https://YOUR-DOMAIN.com/",
+      "jobTitle": "Mechanical Engineer and Product Designer",
+      "worksFor": { "@id": "https://www.smartflowinventory.com/#organization" },
+      "affiliation": { "@type": "CollegeOrUniversity", "name": "Lehigh University" },
+      "knowsAbout": ["Mechanical engineering", "Product design", "Inventory software", "Energy systems", "Robotics"],
+      "sameAs": [
+        "https://www.linkedin.com/in/YOUR-HANDLE",
+        "https://github.com/YOUR-HANDLE"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.smartflowinventory.com/#organization",
+      "name": "SmartFlow",
+      "url": "https://www.smartflowinventory.com",
+      "description": "Inventory software for manufacturing floors.",
+      "founder": { "@id": "https://YOUR-DOMAIN.com/#person" },
+      "parentOrganization": { "@type": "Organization", "name": "ABV Dynamics, Inc." }
+    }
+  ]
+}
+</script>
+
+<style>
+/* Helvetica Black: uses a locally installed licensed copy if present, otherwise Inter Tight 900 stands in.
+   To ship the real thing, add a licensed webfont here:
+   src: url("fonts/HelveticaNeueLTPro-Blk.woff2") format("woff2"), local(...) */
+@font-face{
+  font-family:"Helvetica Black";
+  src:local("Helvetica Neue LT Pro 95 Black"),local("HelveticaNeueLTPro-Blk"),local("Helvetica Neue 95 Black"),local("Helvetica-Black");
+  font-weight:900;font-style:normal;font-display:swap;
+}
+
+:root{
+  --shell:#F6F4EC;       /* SmartFlow eggshell, nudged warm so the green reads harder */
+  --ink:#121416;
+  --field:#1B4D3E;       /* brand green */
+  --deep:#0F2E25;
+  --leaf:#9AD1B8;
+
+  --on-field:var(--shell);
+  --on-field-muted:rgba(246,244,236,.8);
+  --field-line:rgba(246,244,236,.26);
+
+  --paper:var(--shell);
+  --paper-fg:var(--ink);
+  --paper-muted:rgba(18,20,22,.7);
+  --paper-line:rgba(18,20,22,.2);
+  --paper-accent:var(--field);
+  --ph-line:rgba(27,77,62,.35);
+  --ph-bg:linear-gradient(135deg,rgba(27,77,62,.05),rgba(27,77,62,.14));
+
+  --display:"Helvetica Black","Inter Tight","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --sans:"Helvetica Neue","Inter Tight",Helvetica,Arial,sans-serif;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --deep:#0A231C;--paper:#11362B;--paper-fg:var(--shell);--paper-muted:rgba(246,244,236,.76);--paper-line:rgba(246,244,236,.22);
+    --paper-accent:var(--leaf);--ph-line:rgba(154,209,184,.45);--ph-bg:rgba(154,209,184,.08);
+  }
+}
+:root[data-theme="dark"]{
+  --deep:#0A231C;--paper:#11362B;--paper-fg:var(--shell);--paper-muted:rgba(246,244,236,.76);--paper-line:rgba(246,244,236,.22);
+  --paper-accent:var(--leaf);--ph-line:rgba(154,209,184,.45);--ph-bg:rgba(154,209,184,.08);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--field);scroll-padding-top:calc(env(safe-area-inset-top,0px) + 5rem);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--paper-fg);font:400 1.0625rem/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:2px}
+a:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:900;margin:0;letter-spacing:-.035em;line-height:.95}
+.wrap{max-width:1200px;margin:0 auto;padding:0 2rem}
+.skip{position:absolute;left:-999px;top:0;background:var(--shell);color:var(--field);padding:.75rem 1rem;z-index:20}
+.skip:focus{left:1rem;top:1rem}
+
+.on-field{background:var(--field);color:var(--on-field)}
+.on-deep{background:var(--deep);color:var(--on-field)}
+.on-paper{background:var(--paper);color:var(--paper-fg)}
+.on-paper a:focus-visible{outline-color:var(--paper-accent)}
+
+/* header */
+.masthead{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--field);color:var(--on-field);border-bottom:1px solid var(--field-line)}
+.masthead .wrap{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding-top:1.1rem;padding-bottom:1.1rem}
+.brand{display:flex;align-items:center;gap:.75rem;font-family:var(--display);font-weight:900;font-size:1.15rem;letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
+.brand svg{flex:none}
+.nav{display:flex;gap:1.5rem;font-size:.93rem;font-weight:500}
+.nav a{text-decoration:none;padding:.35rem 0;border-bottom:2px solid transparent}
+.nav a:hover,.nav a[aria-current="page"]{color:var(--leaf);border-bottom-color:var(--leaf)}
+
+/* hero */
+.hero{padding:clamp(3rem,7vw,5.5rem) 0 clamp(7rem,12vw,10rem)}
+.byline{font-family:var(--display);font-weight:900;font-size:1.35rem;letter-spacing:-.02em;margin:0 0 1.75rem}
+.hero h1{font-size:clamp(2.4rem,6.6vw,6rem);letter-spacing:-.045em;line-height:.93;text-wrap:balance}
+.hero h1 a{text-decoration-thickness:.07em;text-underline-offset:.09em}
+.hero h1 a:hover{color:var(--leaf)}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-top:3rem;flex-wrap:wrap}
+.hero-foot p{margin:0;max-width:44ch;color:var(--on-field-muted);font-size:1.2rem;line-height:1.45}
+.actions{display:flex;gap:.9rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.9rem 1.4rem;border-radius:8px;border:2px solid var(--shell);background:var(--shell);color:var(--field);font-weight:500;text-decoration:none}
+.btn:hover{background:var(--leaf);border-color:var(--leaf);color:var(--deep)}
+.btn--ghost{background:transparent;color:var(--shell)}
+.btn--ghost:hover{background:rgba(246,244,236,.12);border-color:var(--shell);color:var(--shell)}
+
+/* feature panel overlaps hero and paper */
+.feature{position:relative;z-index:2;margin-top:clamp(-8rem,-9vw,-5rem)}
+.feature-inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:stretch;padding:clamp(1.5rem,4vw,3.5rem);background:var(--deep);color:var(--on-field);border-radius:12px;box-shadow:0 0 0 1px rgba(246,244,236,.14)}
+.feature h2{font-size:clamp(2.75rem,7vw,5.5rem);letter-spacing:-.05em;line-height:.88;margin-bottom:1.25rem}
+.feature p{margin:0 0 1.75rem;max-width:40ch;color:var(--on-field-muted);font-size:1.15rem}
+.feature .ph{border-color:rgba(246,244,236,.4);background:rgba(246,244,236,.06);color:var(--on-field-muted);min-height:240px}
+.ph{display:grid;place-items:center;text-align:center;padding:1rem;border:2px dashed var(--ph-line);background:var(--ph-bg);color:var(--paper-muted);font-size:.95rem;border-radius:8px}
+
+/* sections */
+.section{padding:clamp(4rem,8vw,6.5rem) 0}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.section-head h2{font-size:clamp(2.25rem,5vw,3.75rem);letter-spacing:-.045em}
+.more{font-weight:500}
+
+/* work: open columns, no card chrome */
+.work{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;align-items:start}
+.work .ph{aspect-ratio:4/3;margin-bottom:1.1rem}
+.work article:first-child .ph{aspect-ratio:1/1}
+.work h3{font-size:1.6rem;letter-spacing:-.03em;line-height:1.05;margin-bottom:.6rem}
+.work h3 a{text-decoration:none}
+.work h3 a:hover{color:var(--paper-accent);text-decoration:underline}
+.work p{margin:0 0 .9rem;color:var(--paper-muted);max-width:44ch}
+.meta{display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center;font-size:.92rem;color:var(--paper-muted)}
+
+.tag{display:inline-block;padding:.18rem .65rem;border-radius:999px;font-size:.82rem;font-weight:500;border:1px solid currentColor;white-space:nowrap}
+.tag--fill{background:var(--field);color:#fff;border-color:rgba(255,255,255,.3)}
+.tag--presented{background:#295284;color:#fff;border-color:rgba(255,255,255,.3)}
+.tag--published{background:var(--field);color:#fff;border-color:rgba(255,255,255,.3)}
+.tag--review{background:#7851A9;color:#fff;border-color:rgba(255,255,255,.3)}
+.tag--ongoing{background:#D4A017;color:#121416;border-color:rgba(18,20,22,.3)}
+
+/* research */
+.research{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(2rem,5vw,4rem)}
+.research h2{font-size:clamp(2.25rem,5vw,3.75rem);letter-spacing:-.045em;margin-bottom:1rem}
+.research .intro{margin:0 0 1.5rem;color:var(--on-field-muted);max-width:26ch}
+.pubs{list-style:none;margin:0;padding:0}
+.pub{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.5rem;padding:1.6rem 0;border-top:1px solid var(--field-line)}
+.pub:last-child{border-bottom:1px solid var(--field-line)}
+.pub h3{font-size:1.5rem;letter-spacing:-.03em;line-height:1.08;margin-bottom:.5rem}
+.pub h3 a{text-decoration:none}
+.pub h3 a:hover{color:var(--leaf);text-decoration:underline}
+.pub p{margin:0;color:var(--on-field-muted)}
+.pub .venue a{color:var(--leaf)}
+.on-deep a:focus-visible{outline-color:var(--leaf)}
+
+/* updates: open columns */
+.updates{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.5rem}
+.updates li{border-top:2px solid var(--paper-accent);padding-top:1.1rem}
+.updates time{display:block;font-family:var(--display);font-weight:900;font-size:1.75rem;letter-spacing:-.035em;line-height:1;margin-bottom:.8rem}
+.updates p{margin:0;color:var(--paper-muted);max-width:38ch}
+
+/* closing band */
+.close{padding:clamp(4rem,9vw,7rem) 0}
+.close h2{font-size:clamp(3rem,10vw,8.5rem);letter-spacing:-.055em;line-height:.88;margin-bottom:2rem}
+.close-foot{display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap}
+.close-foot p{margin:0;max-width:36ch;color:var(--on-field-muted);font-size:1.2rem}
+
+/* footer */
+.footer{background:#121416;color:#F6F4EC;padding:3rem 0}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.footer p{margin:0;font-size:.95rem}
+.footer nav{display:flex;gap:1.5rem;font-size:.95rem}
+.footer a:hover{color:#9AD1B8}
+
+@media (max-width:980px){
+  .masthead .wrap{flex-wrap:wrap;gap:.5rem 2rem}
+  .nav{width:100%;overflow-x:auto;white-space:nowrap;padding-bottom:.25rem}
+}
+@media (max-width:860px){
+  .wrap{padding:0 1rem}
+  .feature-inner,.research{grid-template-columns:1fr}
+  .work{grid-template-columns:1fr}
+  .work article:first-child .ph{aspect-ratio:4/3}
+  .updates{grid-template-columns:1fr;gap:2rem}
+  .pub{grid-template-columns:1fr;gap:.9rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+        <circle cx="20" cy="20" r="20" fill="#F6F4EC"/>
+        <circle cx="20" cy="20" r="12" fill="none" stroke="#1B4D3E" stroke-width="5" stroke-dasharray="2.36 2.36"/>
+        <circle cx="20" cy="20" r="10" fill="#1B4D3E"/>
+        <circle cx="20" cy="20" r="3.5" fill="#F6F4EC"/>
+      </svg>
+      JR Perez
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="https://www.smartflowinventory.com" target="_blank" rel="noopener">SmartFlow</a>
+      <a href="theses.html">Theses</a>
+      <a href="projects.html">Projects</a>
+      <a href="casestudies.html">Case Studies</a>
+      <a href="publications.html">Publications</a>
+      <a href="arts.html">Arts</a>
+      <a href="updates.html">Updates</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero on-field" aria-labelledby="home-title">
+    <div class="wrap">
+      <p class="byline">Hi, I'm JR.</p>
+      <h1 id="home-title">Mechanical engineer, product designer, and founder of <a href="https://www.smartflowinventory.com" target="_blank" rel="noopener">SmartFlow</a>.</h1>
+      <div class="hero-foot">
+        <p>I build inventory software for manufacturing floors and do research at Lehigh University.</p>
+        <div class="actions">
+          <a class="btn" href="https://www.smartflowinventory.com" target="_blank" rel="noopener">Explore SmartFlow</a>
+          <a class="btn btn--ghost" href="projects.html">See my work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature wrap" aria-labelledby="sf-title">
+    <div class="feature-inner">
+      <div>
+        <h2 id="sf-title">SmartFlow</h2>
+        <p>SmartFlow is inventory software for manufacturing floors. I founded it and build it under ABV Dynamics, Inc., a Delaware C-Corp.</p>
+        <a class="btn" href="https://www.smartflowinventory.com" target="_blank" rel="noopener">Visit SmartFlow inventory software</a>
+      </div>
+      <div class="ph" role="img" aria-label="SmartFlow product screenshot (placeholder)">Product screenshot placeholder</div>
+    </div>
+  </section>
+
+  <section class="section on-paper" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="work-title">Selected work</h2>
+        <a class="more" href="projects.html">See all projects</a>
+      </div>
+      <div class="work">
+        <article>
+          <div class="ph" role="img" aria-label="Smart Mold Technologies project image (placeholder)">Project image placeholder</div>
+          <h3><a href="projects.html">Smart Mold Technologies</a></h3>
+          <p>Capstone with Prof. John Coulter on translating intelligent mold systems into advanced manufacturing.</p>
+          <div class="meta"><span>Capstone project</span><span class="tag tag--fill">In progress</span></div>
+        </article>
+        <article>
+          <div class="ph" role="img" aria-label="Virtual Power Plant project image (placeholder)">Project image placeholder</div>
+          <h3><a href="projects.html">Virtual Power Plant Deep Learning</a></h3>
+          <p>Deep learning optimization applications for a virtual power plant, built with DERNetSoft.</p>
+          <div class="meta"><span>Deep learning</span><span class="tag">Completed</span></div>
+        </article>
+        <article>
+          <div class="ph" role="img" aria-label="Nuclear Regulation Compliance project image (placeholder)">Project image placeholder</div>
+          <h3><a href="projects.html">Nuclear Regulation Compliance</a></h3>
+          <p>Compliance report for a proposed nuclear SMR-powered cargo ship, with a DER nodal analysis.</p>
+          <div class="meta"><span>Technical analysis</span><span class="tag">Completed</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section on-deep" aria-labelledby="pub-title">
+    <div class="wrap research">
+      <div>
+        <h2 id="pub-title">Research</h2>
+        <p class="intro">Optics, semiconductors, multi-agent robotics, and retrieval systems.</p>
+        <a class="more" href="publications.html">See all publications</a>
+      </div>
+      <ul class="pubs">
+        <li class="pub">
+          <article>
+            <h3><a href="publications.html">Ultrabroadband Optical Limiting and Phase Behavior of Colloids</a></h3>
+            <p>APS Joint Meeting, Anaheim, CA. Lead research at the Advanced Fluids and Biophotonics Lab, funded by DoD and NSF.</p>
+          </article>
+          <span class="tag tag--presented">Presented</span>
+        </li>
+        <li class="pub">
+          <article>
+            <h3><a href="publications.html">Semiconductor Impurities</a></h3>
+            <p class="venue">Interstitial hydrogen and conductivity. <a href="https://doi.org/10.1063/5.0271156" rel="noopener">DOI 10.1063/5.0271156</a></p>
+          </article>
+          <span class="tag tag--published">Published</span>
+        </li>
+        <li class="pub">
+          <article>
+            <h3><a href="publications.html">Hybrid Information-Retrieval Pipeline for RAG AI/LLM</a></h3>
+            <p>ACL-SRW 2025. Lead author on weighted, entropy-guided hybrid retrieval evaluated with LLM-as-a-Judge.</p>
+          </article>
+          <span class="tag tag--review">Under review</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section on-paper" aria-labelledby="upd-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="upd-title">Latest updates</h2>
+        <a class="more" href="updates.html">See all updates</a>
+      </div>
+      <ol class="updates">
+        <li><time datetime="2026-05">May 2026</time><p>Joined the Ventures Lab incubator. A World Bank presentation on energy systems and utility planning was accepted.</p></li>
+        <li><time datetime="2026-04">April 2026</time><p>Won the $5,000 Thalheimer Innovate! Celebrate! grand prize and a $1,000 Baker award.</p></li>
+        <li><time datetime="2026-03">March 2026</time><p>Gave a talk on ultrabroadband optical limiting at the APS Summit in Denver.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="close on-field" aria-labelledby="cta-title">
+    <div class="wrap">
+      <h2 id="cta-title">Get in touch.</h2>
+      <div class="close-foot">
+        <p>For SmartFlow, research collaboration, or engineering work.</p>
+        <a class="btn" href="contact.html">Contact JR</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>&copy; 2026 JR Perez. All rights reserved.</p>
+    <nav aria-label="Social">
+      <a href="https://twitter.com">Twitter</a>
+      <a href="https://linkedin.com">LinkedIn</a>
+      <a href="https://github.com">GitHub</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

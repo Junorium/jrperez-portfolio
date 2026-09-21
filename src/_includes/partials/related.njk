@@ -1,0 +1,17 @@
+{% if relatedItems and relatedItems.length %}
+<section class="related" aria-labelledby="related-title">
+  <h2 id="related-title">Related</h2>
+  <ul>
+    {% for item in relatedItems %}
+      <li>
+        {% set href = item | itemHref %}
+        {% if href %}
+          <a href="{{ href }}"{% if href | isExternalHref %} rel="noopener"{% endif %}>{{ item.data.title }}</a>
+        {% else %}
+          {{ item.data.title }}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

@@ -1,0 +1,23 @@
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ seoTitle or (title + " | JR Perez") }}</title>
+<meta name="description" content="{{ description }}">
+<meta name="author" content="{{ site.author }}">
+<meta name="robots" content="{% if noindex %}noindex,follow{% else %}index,follow,max-image-preview:large{% endif %}">
+<link rel="canonical" href="{{ page.url | absoluteUrl }}">
+<meta property="og:type" content="{{ ogType or 'website' }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ seoTitle or (title + ' | JR Perez') }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ page.url | absoluteUrl }}">
+<meta property="og:image" content="{{ (image or '/images/og-default.jpg') | absoluteUrl }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1B4D3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;900&display=swap" rel="stylesheet">
+{# Preload the display font once a licensed woff2 is in src/fonts/. #}
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">{{ schema | jsonld | safe }}</script>
+</head>

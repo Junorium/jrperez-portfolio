@@ -1,0 +1,7 @@
+{
+  "layout": "layouts/project.njk",
+  "tags": "projects",
+  "permalink": "/projects/{{ page.fileSlug }}/",
+  "schemaType": "project",
+  "ogType": "article"
+}

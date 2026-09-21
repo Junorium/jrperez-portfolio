@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+---
+<section class="page-hero on-field">
+  <div class="wrap">
+    {% include "partials/breadcrumbs.njk" %}
+    <h1>{{ title }}</h1>
+    <div class="page-meta">
+      {% if category %}<span>{{ category }}</span>{% endif %}
+      {% if date %}<time datetime="{{ date | isoDate }}">{{ date | isoDate }}</time>{% endif %}
+      {% set status = status %}
+      {% include "partials/tag.njk" %}
+    </div>
+  </div>
+</section>
+
+<section class="section on-paper">
+  <div class="wrap">
+    <article class="prose">
+      {{ content | safe }}
+    </article>
+    {% set relatedItems = collections.projectItems | related({ topics: topics, url: page.url }) %}
+    {% include "partials/related.njk" %}
+    {% include "partials/smartflow-cta.njk" %}
+    <a class="back" href="/projects/">All projects</a>
+  </div>
+</section>

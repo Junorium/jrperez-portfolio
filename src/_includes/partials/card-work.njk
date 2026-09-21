@@ -1,0 +1,21 @@
+<article>
+  {% if item.data.image %}
+    {% image item.data.image, item.data.imageAlt or item.data.title, { priority: loop.index0 === 0 } %}
+  {% else %}
+    <div class="ph" role="img" aria-label="{{ item.data.title }} project image (placeholder)">Project image placeholder</div>
+  {% endif %}
+  {% set href = item | itemHref %}
+  <h3>
+    {% if href %}
+      <a href="{{ href }}"{% if href | isExternalHref %} rel="noopener"{% endif %}>{{ item.data.title }}</a>
+    {% else %}
+      {{ item.data.title }}
+    {% endif %}
+  </h3>
+  <p>{{ item.data.description }}</p>
+  <div class="meta">
+    {% if item.data.category %}<span>{{ item.data.category }}</span>{% endif %}
+    {% set status = item.data.status %}
+    {% include "partials/tag.njk" %}
+  </div>
+</article>

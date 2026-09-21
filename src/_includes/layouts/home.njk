@@ -1,0 +1,89 @@
+---
+layout: layouts/base.njk
+---
+<section class="hero on-field" aria-labelledby="home-title">
+  <div class="wrap">
+    <p class="byline">Hi, I'm JR.</p>
+    <h1 id="home-title">Mechanical engineer, product designer, and founder of <a href="{{ site.smartflow.url }}" target="_blank" rel="noopener">SmartFlow</a>.</h1>
+    <div class="hero-foot">
+      <p>I'm John Richard Perez, and I go by JR. I build inventory software for manufacturing floors and do research at Lehigh University.</p>
+      <div class="actions">
+        <a class="btn" href="{{ site.smartflow.url }}" target="_blank" rel="noopener">Explore SmartFlow</a>
+        <a class="btn btn--ghost" href="/projects/">See my work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feature wrap" aria-labelledby="sf-title">
+  <div class="feature-inner">
+    <div>
+      <h2 id="sf-title">SmartFlow</h2>
+      <p>SmartFlow is inventory software for manufacturing floors. I founded it and build it under ABV Dynamics, Inc., a Delaware C-Corp.</p>
+      <a class="btn" href="{{ site.smartflow.url }}" target="_blank" rel="noopener">Visit SmartFlow inventory software</a>
+    </div>
+    <div class="ph" role="img" aria-label="SmartFlow product screenshot (placeholder)">Product screenshot placeholder</div>
+  </div>
+</section>
+
+<section class="section on-paper" aria-labelledby="work-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="work-title">Selected work</h2>
+      <a class="more" href="/projects/">See all projects</a>
+    </div>
+    <div class="work">
+      {% set featuredProjects = collections.projectItems | featured | take(3) %}
+      {% for item in featuredProjects %}
+        {% include "partials/card-work.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section on-deep" aria-labelledby="pub-title">
+  <div class="wrap research">
+    <div>
+      <h2 id="pub-title">Research</h2>
+      <p class="intro">Optics, semiconductors, multi-agent robotics, and retrieval systems.</p>
+      <a class="more" href="/publications/">See all publications</a>
+    </div>
+    <ul class="pubs">
+      {% set featuredPubs = collections.publicationItems | featured | take(3) %}
+      {% for item in featuredPubs %}
+        {% include "partials/row-pub.njk" %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section on-paper" aria-labelledby="upd-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="upd-title">Latest updates</h2>
+      <a class="more" href="/updates/">See all updates</a>
+    </div>
+    <ol class="updates">
+      {% for month in updates | latestMonths(3) %}
+        <li>
+          <time datetime="{{ month.month }}">{{ month.month | monthLabel }}</time>
+          <p>
+            {% for item in month.items | take(2) %}
+              {{ item.text }}{% if not loop.last %} {% endif %}
+            {% endfor %}
+          </p>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="close on-field" aria-labelledby="cta-title">
+  <div class="wrap">
+    <h2 id="cta-title">Get in touch.</h2>
+    <div class="close-foot">
+      <p>For SmartFlow, research collaboration, or engineering work.</p>
+      <a class="btn" href="/contact/">Contact JR</a>
+    </div>
+  </div>
+</section>

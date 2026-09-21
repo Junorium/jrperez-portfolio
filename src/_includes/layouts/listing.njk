@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+---
+<section class="page-hero on-field">
+  <div class="wrap">
+    {% include "partials/breadcrumbs.njk" %}
+    <h1>{{ title }}</h1>
+    {% if intro %}
+      <p class="intro">{{ intro }}</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section on-paper">
+  <div class="wrap">
+    {% if listType == "projects" %}
+      <div class="work-list">
+        {% for item in collections.projectItems %}
+          {% include "partials/card-work.njk" %}
+        {% endfor %}
+      </div>
+    {% elif listType == "publications" %}
+      <ul class="pubs pub-list">
+        {% for item in collections.publicationItems %}
+          {% include "partials/row-pub.njk" %}
+        {% endfor %}
+      </ul>
+    {% else %}
+      {{ content | safe }}
+    {% endif %}
+  </div>
+</section>

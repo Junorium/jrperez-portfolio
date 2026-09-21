@@ -1,0 +1,43 @@
+---
+description: Portfolio rebuild rules, content intake, and SEO. Always apply.
+alwaysApply: true
+---
+
+# JR Perez portfolio
+
+Source of truth: `docs/HANDOFF.md`. Design: `design-reference/index-b-green-field.html` (Homepage B). Do not invent a new design system.
+
+## Goals and rules (HANDOFF §1)
+
+- Modular: one doc = one content file. Listings, home, sitemap, related, breadcrumbs, and schema update at build.
+- Crawlable: complete HTML at build. No client-side JS unless JR asks. Real `<a href>` only.
+- SmartFlow SEO and name search for "JR Perez" and "John Richard Perez" (HANDOFF §8).
+- Do not break existing functionality. Nav order minus Case Studies. Do not invent facts. Missing info = `TODO` plus the §7.9 report.
+- Eleventy 3, plain HTML/CSS. Case studies are out of scope. Leave `casestudies/` untouched. Reserve `/case-studies/`.
+- Eleventy reserves `page`. Use `hasPage` for the thin-page flag (same meaning as HANDOFF `page`).
+
+## Content model (HANDOFF §6)
+
+Shared fields: `title`, `description` (120–160 chars), `date` (ISO), `hasPage`, optional `seoTitle`, `updated`, `order`, `featured`, `smartflow`, `topics` (not `tags`), `image`, `imageAlt`, `noindex`.
+`hasPage: true` only if the body has 150+ real words. Otherwise list/home only; title links to `link` or `doi` if present.
+Sort: `order` ascending, else `date` descending.
+Projects: `category`, `status` (`in-progress` | `completed`). Body H2s: Overview, My role, Approach, Results, Tools and methods, Collaborators and sponsors, What is next.
+Publications: `venue`, `status` (`presented` | `published` | `ongoing` | `under-review`), `doi`, `authors`, `role`. Body: Abstract, Contribution, Method, Result, Where to read it.
+Updates: `src/_data/updates.json`, one object per month, newest first. Home: latest 3 months, max 2 items each.
+
+## Doc intake (HANDOFF §7)
+
+Follow §7.1–7.9 in order. Classify from JR’s type, else infer; ask once if ambiguous.
+Extract by meaning. Do not invent dates, names, numbers, or outcomes. Ask once for missing required fields, then `TODO`.
+Copy `docs/content-templates/<type>.md`. Slug: kebab-case, 3–5 words, permanent.
+No Unsplash/hotlinks. Missing images use `.ph` and go in the report.
+Run `npm run build` then `npm run check`. End with the §7.9 report.
+
+## SEO (HANDOFF §8)
+
+- Site data in `src/_data/site.js`. Full name visible on Home support line intent and About; titles on Home and About only. Other pages: `{title} | JR Perez`.
+- Every page: unique title/description, absolute canonical, robots, OG, Twitter, `lang="en"`, author meta, JSON-LD via the `jsonld` filter.
+- Person, WebSite, SmartFlow Organization (`founder` / `worksFor`). `sameAs` only URLs JR supplied.
+- SmartFlow links: nav, home H1, feature CTA, footer. Varied anchors. Max two in a page’s main content. Claims only from `site.smartflow` or JR copy.
+- `hasPage: true` detail pages get breadcrumbs, related (shared `topics`, max 3), prev/next.
+- Arts stays `noindex` until it has real content.

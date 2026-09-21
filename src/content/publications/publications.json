@@ -1,0 +1,7 @@
+{
+  "layout": "layouts/publication.njk",
+  "tags": "publications",
+  "permalink": "/publications/{{ page.fileSlug }}/",
+  "schemaType": "publication",
+  "ogType": "article"
+}
