@@ -131,19 +131,24 @@ export default async function (eleventyConfig) {
     if (!fs.existsSync(inputPath)) {
       return `<div class="ph" role="img" aria-label="${altText}">Image placeholder</div>`;
     }
-    const metadata = await eleventyImage(inputPath, {
-      widths: extra.widths || [400, 800, 1200],
-      formats: ["webp", "jpeg"],
-      outputDir: path.join("_site", "img"),
-      urlPath: "/img/",
-      cacheOptions: { directory: ".cache" }
-    });
-    return eleventyImage.generateHTML(metadata, {
-      alt: altText,
-      sizes: extra.sizes || "(min-width: 860px) 33vw, 100vw",
-      loading: extra.priority ? "eager" : "lazy",
-      decoding: "async"
-    });
+    try {
+      const isPng = /\.png$/i.test(inputPath);
+      const metadata = await eleventyImage(inputPath, {
+        widths: extra.widths || [400, 800, 1200],
+        formats: extra.formats || (isPng ? ["webp", "png"] : ["webp", "jpeg"]),
+        outputDir: path.join("_site", "img"),
+        urlPath: "/img/",
+        cacheOptions: { directory: ".cache" }
+      });
+      return eleventyImage.generateHTML(metadata, {
+        alt: altText,
+        sizes: extra.sizes || "(min-width: 860px) 33vw, 100vw",
+        loading: extra.priority ? "eager" : "lazy",
+        decoding: "async"
+      });
+    } catch {
+      return `<div class="ph" role="img" aria-label="${altText}">Image placeholder</div>`;
+    }
   });
 
   eleventyConfig.addCollection("projectItems", (api) =>

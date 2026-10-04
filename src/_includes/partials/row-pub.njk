@@ -1,13 +1,7 @@
 <li class="pub">
   <article>
     {% set href = item | itemHref %}
-    <h3>
-      {% if href %}
-        <a href="{{ href }}"{% if href | isExternalHref %} rel="noopener"{% endif %}>{{ item.data.title }}</a>
-      {% else %}
-        {{ item.data.title }}
-      {% endif %}
-    </h3>
+    <h3>{% if href %}<a href="{{ href }}"{% if href | isExternalHref %} rel="noopener"{% endif %}>{{ item.data.title }}</a>{% else %}{{ item.data.title }}{% endif %} {% set status = item.data.status %}{% include "partials/tag.njk" %}</h3>
     {% if item.data.doi %}
       <p class="venue">{{ item.data.description }} <a href="https://doi.org/{{ item.data.doi }}" rel="noopener">DOI {{ item.data.doi }}</a></p>
     {% elif item.data.venue %}
@@ -16,6 +10,4 @@
       <p>{{ item.data.description }}</p>
     {% endif %}
   </article>
-  {% set status = item.data.status %}
-  {% include "partials/tag.njk" %}
 </li>

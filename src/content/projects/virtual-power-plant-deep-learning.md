@@ -13,6 +13,8 @@ status: completed
 topics:
   - energy
   - deep-learning
-image: null
-imageAlt: null
+image: /images/projects/virtual-power-plant-deep-learning/zimbabwe-grid-coverage-map.png
+imageAlt: Map of Zimbabwe's power grid coverage
+imageWidth: 1686
+imageHeight: 712
 ---

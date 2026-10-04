@@ -16,7 +16,7 @@ layout: layouts/base.njk
     <ol class="updates-full">
       {% for month in updates | latestMonths(100) %}
         <li>
-          <time datetime="{{ month.month }}">{{ month.month | monthLabel }}</time>
+          <time datetime="{{ month.month }}">{{ month.label or (month.month | monthLabel) }}</time>
           {% for item in month.items %}
             <p>
               {% if item.link %}

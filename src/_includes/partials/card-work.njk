@@ -1,6 +1,15 @@
 <article>
   {% if item.data.image %}
-    {% image item.data.image, item.data.imageAlt or item.data.title, { priority: loop.index0 === 0 } %}
+    <div class="media{% if item.data.imageFit == 'contain' %} media--contain{% endif %}">
+      <img
+        src="{{ item.data.image }}"
+        alt="{{ item.data.imageAlt or item.data.title }}"
+        width="{{ item.data.imageWidth or 1600 }}"
+        height="{{ item.data.imageHeight or 900 }}"
+        loading="lazy"
+        decoding="async"
+      >
+    </div>
   {% else %}
     <div class="ph" role="img" aria-label="{{ item.data.title }} project image (placeholder)">Project image placeholder</div>
   {% endif %}

@@ -2,16 +2,21 @@
 layout: layouts/base.njk
 ---
 <section class="hero on-field" aria-labelledby="home-title">
-  <div class="wrap">
-    <p class="byline">Hi, I'm JR.</p>
-    <h1 id="home-title">Mechanical engineer, product designer, and founder of <a href="{{ site.smartflow.url }}" target="_blank" rel="noopener">SmartFlow</a>.</h1>
-    <div class="hero-foot">
-      <p>I'm John Richard Perez, and I go by JR. I build inventory software for manufacturing floors and do research at Lehigh University.</p>
-      <div class="actions">
-        <a class="btn" href="{{ site.smartflow.url }}" target="_blank" rel="noopener">Explore SmartFlow</a>
-        <a class="btn btn--ghost" href="/projects/">See my work</a>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="byline">Hi, I'm JR.</p>
+      <h1 id="home-title">Mechanical engineer, product designer, and founder of <a href="{{ site.smartflow.url }}" target="_blank" rel="noopener">SmartFlow</a>.</h1>
+      <div class="hero-foot">
+        <p>I'm JR, and I'm committed to building elegant solutions for engineers and manufacturers.</p>
+        <div class="actions">
+          <a class="btn" href="{{ site.smartflow.url }}" target="_blank" rel="noopener">Explore SmartFlow</a>
+          <a class="btn btn--ghost" href="/projects/">See my work</a>
+        </div>
       </div>
     </div>
+    <figure class="hero-photo">
+      {% image "/images/hero/warehouse-floor-restock.jpg", "JR Perez on the shop floor beside a 3D printer and restocked inventory shelving", { priority: true, sizes: "(min-width: 860px) 40vw, 100vw" } %}
+    </figure>
   </div>
 </section>
 
@@ -19,10 +24,12 @@ layout: layouts/base.njk
   <div class="feature-inner">
     <div>
       <h2 id="sf-title">SmartFlow</h2>
-      <p>SmartFlow is inventory software for manufacturing floors. I founded it and build it under ABV Dynamics, Inc., a Delaware C-Corp.</p>
+      <p>SmartFlow is inventory software for manufacturing floors. Most ERP systems run hundreds of thousands of dollars, and aren't built for custom manufacturing workflows. We change that.</p>
       <a class="btn" href="{{ site.smartflow.url }}" target="_blank" rel="noopener">Visit SmartFlow inventory software</a>
     </div>
-    <div class="ph" role="img" aria-label="SmartFlow product screenshot (placeholder)">Product screenshot placeholder</div>
+    <div class="feature-media">
+      {% image "/images/smartflow/dashboard-uptime-mockup.png", "SmartFlow Uptime dashboard showing real-time inventory and machine status", { sizes: "(min-width: 860px) 40vw, 100vw" } %}
+    </div>
   </div>
 </section>
 
@@ -66,7 +73,7 @@ layout: layouts/base.njk
     <ol class="updates">
       {% for month in updates | latestMonths(3) %}
         <li>
-          <time datetime="{{ month.month }}">{{ month.month | monthLabel }}</time>
+          <time datetime="{{ month.month }}">{{ month.label or (month.month | monthLabel) }}</time>
           <p>
             {% for item in month.items | take(2) %}
               {{ item.text }}{% if not loop.last %} {% endif %}

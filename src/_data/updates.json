@@ -1,5 +1,12 @@
 [
   {
+    "month": "2026-06",
+    "label": "June 2026-Present",
+    "items": [
+      { "text": "Scaling SmartFlow Inventory." }
+    ]
+  },
+  {
     "month": "2026-05",
     "items": [
       { "text": "Accepted into the Ventures Lab incubator program." },

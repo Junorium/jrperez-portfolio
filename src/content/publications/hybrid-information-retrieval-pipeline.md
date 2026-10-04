@@ -8,7 +8,7 @@ hasPage: false
 permalink: false
 featured: true
 venue: ACL-SRW 2025
-status: under-review
+status: published
 doi: null
 authors: []
 role: Lead author
